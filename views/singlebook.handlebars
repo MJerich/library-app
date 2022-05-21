@@ -1,0 +1,22 @@
+<div>
+    {{> book-info book }}
+    
+    {{#if loggedIn}}
+        <button type="button" class="btn btn-primary" data-book_id="{{book.id}}">Checkout Book</button>
+        <form class="review-form">
+            <div>
+                <textarea name="review-body"></textarea>
+            </div>
+    
+            <div>
+                <button type="submit">add review</button>
+            </div>
+        </form>
+    {{/if}}
+    
+    {{> review book.reviews}}
+</div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="/javascript/single-book.js"></script>
+    <script src="/javascript/reviews.js"></script>
